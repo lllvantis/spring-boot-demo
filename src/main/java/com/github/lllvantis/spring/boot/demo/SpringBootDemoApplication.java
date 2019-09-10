@@ -11,23 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
-@EnableConfigurationProperties({
-		RemoteUrlProperties.class,
-		SpringBootDemoProperties.class
-})
 public class SpringBootDemoApplication {
-	@Autowired
-	RemoteUrlProperties remoteUrlProperties;
-	@Autowired
-	SpringBootDemoProperties springBootDemoProperties;
-
     public static void main(String[] args) {
         SpringApplication.run(SpringBootDemoApplication.class, args);
     }
-
-    @GetMapping("/call-order-system")
-	public String callOrderSystem(@RequestParam String path) {
-    	return springBootDemoProperties.getWelcome() + ": " + remoteUrlProperties.getOrderSystemUrl() + path;
-	}
 }
