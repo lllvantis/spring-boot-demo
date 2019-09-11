@@ -1,5 +1,0 @@
-vantis:
-  spring-boot-demo:
-    welcome: 你好
-  module:
-    order-system-url: http://order-system-local/

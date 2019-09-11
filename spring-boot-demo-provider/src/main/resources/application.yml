@@ -1,0 +1,9 @@
+# 改用 yml 配置是为了解决中文乱码问题
+# 根据官方用法 *.properties 如果有非标准字符应该使用 Unicode 的 escape 代码方式避免乱码
+# 不如直接使用 yml 格式配置 默认使用 UTF-8 编码
+vantis:
+  spring-boot-demo:
+    welcome: 你好
+  module:
+    order-system-url: http://order-system-local/
+    user-system-url: http://user-system-local/

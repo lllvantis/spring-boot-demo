@@ -2,7 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
+	<packaging>pom</packaging>
+	<modules>
+		<module>spring-boot-demo-domain</module>
+		<module>spring-boot-demo-interface</module>
+		<module>spring-boot-demo-provider</module>
+		<module>spring-boot-demo-service</module>
+		<module>spring-boot-demo-service-starter</module>
+	</modules>
+	<parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.8.RELEASE</version>
@@ -10,7 +18,7 @@
     </parent>
     <groupId>com.github.lllvantis</groupId>
     <artifactId>spring-boot-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <name>spring-boot-demo</name>
     <description>Demo project for Spring Boot</description>
 
@@ -45,14 +53,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
