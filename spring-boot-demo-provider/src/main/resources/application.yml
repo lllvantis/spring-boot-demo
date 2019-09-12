@@ -1,9 +1,24 @@
 # 改用 yml 配置是为了解决中文乱码问题
 # 根据官方用法 *.properties 如果有非标准字符应该使用 Unicode 的 escape 代码方式避免乱码
 # 不如直接使用 yml 格式配置 默认使用 UTF-8 编码
-vantis:
-  spring-boot-demo:
-    welcome: 你好
-  module:
-    order-system-url: http://order-system-local/
-    user-system-url: http://user-system-local/
+spring:
+  application:
+    name: spring-boot-demo
+nacos:
+  config:
+    bootstrap:
+      enable: true
+    access-key: LTAI4Fne9FuNZCBpKs2m92eP
+    secret-key: fD1WSeVAZdP1anUhvYgPrhFZEszf0D
+    namespace: 882e73de-e64e-45b8-8bbc-66a56144e827
+    endpoint: acm.aliyun.com
+    # default properties
+    data-id: com.github.lllvantis:spring-boot-demo.properties
+    group: DEFAULT_GROUP
+    type: properties
+    # additional properties
+    ext-config:
+      - data-id: com.github.lllvantis:module-url-demo.properties
+        group: DEFAULT_GROUP
+        type: properties
+    auto-refresh: true
