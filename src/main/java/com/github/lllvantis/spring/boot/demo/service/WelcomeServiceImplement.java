@@ -2,7 +2,9 @@ package com.github.lllvantis.spring.boot.demo.service;
 
 import com.github.lllvantis.spring.boot.demo.config.RemoteUrlProperties;
 import com.github.lllvantis.spring.boot.demo.config.SpringBootDemoProperties;
+import org.springframework.stereotype.Service;
 
+@Service
 public class WelcomeServiceImplement implements WelcomeService {
 	private final RemoteUrlProperties remoteUrlProperties;
 	private final SpringBootDemoProperties springBootDemoProperties;
@@ -15,6 +17,6 @@ public class WelcomeServiceImplement implements WelcomeService {
 
 	@Override
 	public String welcome(String name) {
-		return springBootDemoProperties.getWelcome() + name + ": " + remoteUrlProperties.getOrderSystemUrl();
+		return springBootDemoProperties.getWelcome() + " " + name + " from " + remoteUrlProperties.getOrderSystemUrl();
 	}
 }
