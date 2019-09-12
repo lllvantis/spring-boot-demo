@@ -27,7 +27,7 @@ public class SpringBootDemoApplication {
     }
 
     @GetMapping("/call-order-system")
-	public String callOrderSystem(@RequestParam String path) {
-    	return springBootDemoProperties.getWelcome() + ": " + remoteUrlProperties.getOrderSystemUrl() + path;
+	public String callOrderSystem(@RequestParam String name) {
+		return springBootDemoProperties.getWelcome() + name + ": " + remoteUrlProperties.getOrderSystemUrl();
 	}
 }
