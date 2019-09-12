@@ -14,7 +14,7 @@ public class WelcomeServiceImplement implements WelcomeService {
 	}
 
 	@Override
-	public String welcome(String path) {
-		return springBootDemoProperties.getWelcome() + ": " + remoteUrlProperties.getOrderSystemUrl() + path;
+	public String welcome(String name) {
+		return springBootDemoProperties.getWelcome() + name + ": " + remoteUrlProperties.getOrderSystemUrl();
 	}
 }

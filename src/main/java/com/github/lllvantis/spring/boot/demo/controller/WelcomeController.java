@@ -15,7 +15,7 @@ public class WelcomeController {
 	}
 
 	@GetMapping("/call-order-system")
-	public String callOrderSystem(@RequestParam String path) {
-		return welcomeService.welcome(path);
+	public String callOrderSystem(@RequestParam String name) {
+		return welcomeService.welcome(name);
 	}
 }
